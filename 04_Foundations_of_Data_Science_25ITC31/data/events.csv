@@ -1,0 +1,10 @@
+event_id,event_name,category,event_date,venue,capacity,registered_count,status
+EVT-07,"DevOps & Kubernetes Cloud Workshop","Hands-on Workshop",2026-12-02,"Cloud Computing Lab",40,0,ACTIVE
+EVT-06,"Career in Big Tech - Guest Lecture","Guest Lecture",2026-11-05,"Seminar Hall 2",100,7,COMPLETED
+EVT-08,"INNOVATE 2027 - Project Hackathon","Technical Symposium",2027-01-15,"Innovation Center",60,0,ACTIVE
+EVT-01,"TECHNOFEST 2026 - AI Symposium","Technical Symposium",2026-08-20,"Main Auditorium",150,10,COMPLETED
+EVT-03,"Cyber Security & Zero Trust Seminar","National Seminar",2026-09-18,"Conference Hall 1",80,6,COMPLETED
+EVT-02,"Full Stack MERN Bootcamp","Hands-on Workshop",2026-09-05,"IT Lab 3 & 4",50,7,COMPLETED
+EVT-TEST,"AI Micro-Workshop","Hands-on Workshop",2026-11-27,"Seminar Hall 1",2,2,ACTIVE
+EVT-05,"Data Analytics with Python Masterclass","Hands-on Workshop",2026-10-25,"MCA Lab 1",45,8,COMPLETED
+EVT-04,"VIBRANCE 2026 - State Cultural Gala","Cultural Fest",2026-10-10,"Open Air Theatre",250,9,COMPLETED

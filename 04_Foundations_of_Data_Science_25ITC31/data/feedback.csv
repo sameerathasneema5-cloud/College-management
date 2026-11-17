@@ -1,0 +1,9 @@
+feedback_id,student_id,event_id,rating,comments
+FB-001,25IT001,EVT-01,5,"Outstanding symposium! The AI hackathon problem statements were top notch."
+FB-002,25IT031,EVT-01,5,"Great keynote address and very engaging tech tracks."
+FB-003,25IT061,EVT-01,4,"Extremely well organized, great hospitality."
+FB-004,25IT001,EVT-02,5,"Hands-on MERN stack sessions were super practical!"
+FB-005,25CS012,EVT-02,5,"Loved building full-stack apps with React & Node.js."
+FB-006,25IT001,EVT-05,5,"Pandas & Seaborn visualizations gave real clarity on data science."
+FB-007,25AD005,EVT-05,5,"Essential for curriculum and industry project development!"
+FB-008,25IT091,EVT-01,5,"Remarkable technical event!"

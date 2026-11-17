@@ -1,0 +1,142 @@
+================================================================================
+SAMPLE INPUTS AND OUTPUTS TRANSCRIPT
+COLLEGE EVENT MANAGEMENT AND PARTICIPATION ANALYSIS SYSTEM
+Course Code: 25ITT32 - Java Programming
+Velalar College of Engineering and Technology, Erode - 12
+================================================================================
+
+--------------------------------------------------------------------------------
+1. APPLICATION LAUNCH AND MAIN MENU
+--------------------------------------------------------------------------------
+Command:
+java -cp bin com.college.eventmgmt.Main
+
+Console Output:
+================================================================================
+     VELALAR COLLEGE OF ENGINEERING AND TECHNOLOGY (VCET), ERODE-12
+            DEPARTMENT OF INFORMATION TECHNOLOGY (2026-2027)
+     COLLEGE EVENT MANAGEMENT AND PARTICIPATION ANALYSIS SYSTEM (25ITT32)
+================================================================================
+
+--------------------------------------------------------------------------------
+                                MAIN PORTAL
+--------------------------------------------------------------------------------
+ [1] Administrator / Event Organizer Portal
+ [2] Student Portal (Browse, Register, Feedback)
+ [3] Faculty & Participation Analytics Dashboard (Java Streams & Reports)
+ [4] Run Automated Demonstration & Validation Suite (All FRs Verified)
+ [5] Export Data & Exit System
+--------------------------------------------------------------------------------
+Enter your choice (1-5): 1
+
+--------------------------------------------------------------------------------
+2. ADMINISTRATOR PORTAL - VIEWING SCHEDULED EVENTS
+--------------------------------------------------------------------------------
+--- [ADMINISTRATOR / ORGANIZER PORTAL] ---
+1. View All Scheduled Events
+2. Add New College Event
+3. Record Student Attendance
+4. Export Datasets to CSV for Python Subsystem
+5. Back to Main Menu
+Select operation (1-5): 1
+
+=== ALL COLLEGE EVENTS ===
+Event ID   | Title                            | Category           | Date       | Venue              | Capacity | Reg Count| Status
+-----------------------------------------------------------------------------------------------------------------
+EVT-01     | TECHNOFEST 2026 - AI Symposium   | Technical Symposium| 2026-08-20 | Main Auditorium    | Cap: 150 | Reg:  10 | COMPLETED
+EVT-02     | Full Stack MERN Bootcamp         | Hands-on Workshop  | 2026-09-05 | IT Lab 3 & 4       | Cap:  50 | Reg:   7 | COMPLETED
+EVT-03     | Cyber Security & Zero Trust Semi | National Seminar   | 2026-09-18 | Conference Hall 1  | Cap:  80 | Reg:   6 | COMPLETED
+EVT-04     | VIBRANCE 2026 - State Cultural Ga| Cultural Fest      | 2026-10-10 | Open Air Theatre   | Cap: 250 | Reg:   9 | COMPLETED
+EVT-05     | Data Analytics with Python Maste | Hands-on Workshop  | 2026-10-25 | MCA Lab 1          | Cap:  45 | Reg:   8 | COMPLETED
+EVT-06     | Career in Big Tech - Guest Lectu | Guest Lecture      | 2026-11-05 | Seminar Hall 2     | Cap: 100 | Reg:   7 | COMPLETED
+EVT-07     | DevOps & Kubernetes Cloud Worksh | Hands-on Workshop  | 2026-12-02 | Cloud Computing Lab| Cap:  40 | Reg:   0 | ACTIVE
+EVT-08     | INNOVATE 2027 - Project Hackath  | Technical Symposium| 2027-01-15 | Innovation Center  | Cap:  60 | Reg:   0 | ACTIVE
+
+--------------------------------------------------------------------------------
+3. STUDENT PORTAL - LOGIN, BROWSE & REGISTER FOR EVENT
+--------------------------------------------------------------------------------
+Enter Student Register No (e.g., 25IT001, 25IT031, 25IT061, 25IT091, 25ITL01): 25IT001
+
+Welcome, Aadhavan K (25IT001 - Information Technology)!
+
+--- [STUDENT PORTAL] ---
+1. Browse Active Events with Vacancies
+2. Register for an Event
+3. View My Registrations & Attendance
+4. Submit Post-Event Rating and Feedback
+5. Back to Main Menu
+Select option (1-5): 1
+
+=== ACTIVE EVENTS OPEN FOR REGISTRATION ===
+[EVT-07] DevOps & Kubernetes Cloud Workshop  | Date: 2026-12-02 | Seats Left: 40/40
+[EVT-08] INNOVATE 2027 - Project Hackathon   | Date: 2027-01-15 | Seats Left: 60/60
+
+Select option (1-5): 2
+Enter Event ID to register (e.g., EVT-07): EVT-07
+
+[SUCCESS] Registration Confirmed!
+Details: REG-026    | Student: 25IT001    | Event: EVT-07     | Date: 2026-11-17 18:43 | Status: CONFIRMED
+
+--------------------------------------------------------------------------------
+4. DUPLICATE REGISTRATION REJECTION TEST (FR-03)
+--------------------------------------------------------------------------------
+Select option (1-5): 2
+Enter Event ID to register (e.g., EVT-07): EVT-07
+
+[REGISTRATION REJECTED] Registration Rejected: Student [25IT001] is already registered for Event [EVT-07].
+
+--------------------------------------------------------------------------------
+5. STUDENT PORTAL - SUBMITTING RATING & FEEDBACK (FR-04)
+--------------------------------------------------------------------------------
+Select option (1-5): 4
+Enter Event ID to rate (e.g., EVT-01): EVT-01
+Enter Rating (1 to 5 Stars): 5
+Enter Feedback Comments: Superb workshop with extensive practical code demonstrations!
+
+[SUCCESS] Thank you! Feedback recorded successfully.
+
+--------------------------------------------------------------------------------
+6. FACULTY & ANALYTICS DASHBOARD (JAVA STREAMS & MULTITHREADING)
+--------------------------------------------------------------------------------
+Select choice: 3
+
+================================================================================
+                 FACULTY & EVENT PARTICIPATION ANALYTICS
+             Powered by Java 21 Streams API & Concurrency
+================================================================================
+
+[1] Department-wise Participation Distribution (Java Streams):
+    Information Technology           : 18 students registered
+    Computer Science and Engg        :  8 students registered
+    Artificial Intelligence & DS     :  6 students registered
+    Electronics and Comm Engg        :  3 students registered
+    Electrical and Electronics Engg  :  1 students registered
+
+[2] Category-wise Event Distribution:
+    Hands-on Workshop         :  3 events
+    Technical Symposium       :  2 events
+    National Seminar          :  1 events
+    Cultural Fest             :  1 events
+    Guest Lecture             :  1 events
+
+[3] Overall Institutional Satisfaction Rating: 4.86 / 5.0 Stars
+
+[4] Event Participation Performance Analysis:
+Analysis ID | Event ID                         | Total Reg| Attended| Attend Rate  | Avg Rating
+-----------------------------------------------------------------------------------------
+ANA-01      | TECHNOFEST 2026 - AI Symposium   | 10        | 9       |  90.00%      | 4.80★
+ANA-02      | Full Stack MERN Bootcamp         | 7         | 6       |  85.71%      | 4.67★
+ANA-03      | Cyber Security & Zero Trust Semi | 6         | 5       |  83.33%      | 4.00★
+ANA-04      | VIBRANCE 2026 - State Cultural Ga| 9         | 8       |  88.89%      | 5.00★
+ANA-05      | Data Analytics with Python Maste | 8         | 7       |  87.50%      | 5.00★
+
+[5] Launching Asynchronous Multithreaded Audit Worker...
+[THREAD] Starting background asynchronous report generation on: Report-Worker-Thread
+[THREAD-PROGRESS] Compiled analysis for EVT-01 -> Attendance Rate: 90.00%
+[THREAD-PROGRESS] Compiled analysis for EVT-02 -> Attendance Rate: 85.71%
+[THREAD-PROGRESS] Compiled analysis for EVT-03 -> Attendance Rate: 83.33%
+[THREAD-PROGRESS] Compiled analysis for EVT-04 -> Attendance Rate: 88.89%
+[THREAD-PROGRESS] Compiled analysis for EVT-05 -> Attendance Rate: 87.50%
+[THREAD-PROGRESS] Compiled analysis for EVT-06 -> Attendance Rate: 85.71%
+[THREAD] Background report compilation completed successfully.
+================================================================================

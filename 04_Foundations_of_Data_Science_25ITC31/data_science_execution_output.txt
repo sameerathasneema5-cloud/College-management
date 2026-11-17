@@ -1,0 +1,43 @@
+[INGEST] Loading relational datasets from storage...
+ -> Events Loaded       : 9 rows
+ -> Students Loaded     : 16 rows
+ -> Registrations Loaded: 27 rows
+ -> Feedback Loaded     : 8 rows
+
+[PREPROCESS] Starting data cleaning and transformation pipeline...
+ -> Duplicate registrations removed: 0
+ -> Attendance Rate IQR: 85.71 (Q1: 0.00, Q3: 85.71)
+
+[SUCCESS] Preprocessed datasets saved to:
+ -> C:\CollegeManagement\04_Foundations_of_Data_Science_25ITC31\data\cleaned_master_analytics.csv
+ -> C:\CollegeManagement\04_Foundations_of_Data_Science_25ITC31\data\cleaned_participant_level.csv
+
+===============================================================================
+                     DESCRIPTIVE STATISTICAL METRICS (UNIT 1)
+===============================================================================
+Metric: CAPACITY                  | Mean:  86.33 | Median:  60.00 | Std:  74.20 | Min:   2.0 | Max: 250.0
+Metric: TOTAL_REGISTERED          | Mean:   3.00 | Median:   0.00 | Std:   4.12 | Min:   0.0 | Max:  10.0
+Metric: TOTAL_ATTENDED            | Mean:   2.44 | Median:   0.00 | Std:   3.75 | Min:   0.0 | Max:   9.0
+Metric: ATTENDANCE_RATE_PCT       | Mean:  29.25 | Median:   0.00 | Std:  43.88 | Min:   0.0 | Max:  90.0
+Metric: AVG_RATING                | Mean:   1.64 | Median:   0.00 | Std:   2.46 | Min:   0.0 | Max:   5.0
+===============================================================================
+
+
+[VISUALIZATION] Rendering publication-quality charts...
+ -> Saved: C:\CollegeManagement\04_Foundations_of_Data_Science_25ITC31\visualizations\01_category_wise_participation.png
+ -> Saved: C:\CollegeManagement\04_Foundations_of_Data_Science_25ITC31\visualizations\02_registration_vs_capacity_utilization.png
+ -> Saved: C:\CollegeManagement\04_Foundations_of_Data_Science_25ITC31\visualizations\03_department_wise_engagement.png
+ -> Saved: C:\CollegeManagement\04_Foundations_of_Data_Science_25ITC31\visualizations\04_feedback_rating_distribution.png
+ -> Saved: C:\CollegeManagement\04_Foundations_of_Data_Science_25ITC31\visualizations\05_monthly_event_trend.png
+C:\CollegeManagement\04_Foundations_of_Data_Science_25ITC31\eda_and_visualization.py:162: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.boxplot(x="category", y="attendance_rate_pct", data=completed_events, palette="pastel", ax=ax)
+C:\CollegeManagement\04_Foundations_of_Data_Science_25ITC31\eda_and_visualization.py:167: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator. Otherwise, ticks may be mislabeled.
+  ax.set_xticklabels(ax.get_xticklabels(), rotation=15, ha="right")
+ -> Saved: C:\CollegeManagement\04_Foundations_of_Data_Science_25ITC31\visualizations\06_attendance_rate_boxplot.png
+ -> Saved: C:\CollegeManagement\04_Foundations_of_Data_Science_25ITC31\visualizations\07_correlation_heatmap.png
+ -> Saved: C:\CollegeManagement\04_Foundations_of_Data_Science_25ITC31\visualizations\08_pairplot_multivariate.png
+
+[SUCCESS] All 8 publication-ready charts successfully generated!

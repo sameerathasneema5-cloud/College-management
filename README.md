@@ -48,47 +48,45 @@ c:\CollegeManagement\
 ├── 📁 02_Database_Management_Systems_25ITT31/
 │   ├── 📁 diagrams/
 │   │   └── Entity_Relationship_Diagram_ERD.jpg
-│   ├── ER_and_Relational_Model.md           # ER model & Relational Algebra proofs
-│   ├── Normalization_Document.md            # 1NF, 2NF, 3NF, BCNF decomposition proofs
-│   ├── database_schema.sql                  # Production DDL schema with constraints & views
-│   ├── sample_data.sql                      # Seed DML dataset for VCET events & students
-│   ├── analytical_queries.sql               # 15+ Advanced SQL queries (CO2, CO3)
-│   └── Transaction_and_Concurrency_Control.md # ACID, Strict 2PL & Deadlock handling
+│   ├── Entity_Relationship_Diagram_ERD.jpg      # ER Diagram
+│   ├── run_dbms.bat                             # Double-Click Runnable SQL Runner (.bat)
+│   ├── dbms_execution_output.txt                # Output text file of 15 queries executed
+│   ├── dbms_execution_screenshot.png            # Screenshot of DBMS execution
+│   ├── execute_dbms.py                          # SQL execution engine
+│   ├── ER_and_Relational_Model.md               # ER model & Relational Algebra proofs
+│   ├── Normalization_Document.md                # 1NF, 2NF, 3NF, BCNF decomposition proofs
+│   ├── database_schema.sql                      # Production DDL schema with constraints & views
+│   ├── sample_data.sql                          # Seed DML dataset for VCET events & students
+│   ├── analytical_queries.sql                   # 15+ Advanced SQL queries (CO2, CO3)
+│   └── Transaction_and_Concurrency_Control.md   # ACID, Strict 2PL & Deadlock handling
 │
 ├── 📁 03_Java_Programming_25ITT32/
 │   ├── 📁 src/com/college/eventmgmt/
-│   │   ├── Main.java                        # Interactive application entry point
-│   │   ├── 📁 model/                        # Domain entities (Event, Student, Registration, etc.)
-│   │   ├── 📁 dao/                          # Database connection & EventDAO
-│   │   ├── 📁 service/                      # Business logic, Streams & Multithreading
-│   │   └── 📁 exception/                    # Custom exception classes
-│   ├── 📁 bin/                              # Compiled bytecode
-│   ├── run.bat                              # 1-Click Windows execution batch script
-│   ├── run.ps1                              # 1-Click PowerShell runner
-│   ├── sample_inputs_outputs.txt            # Recorded test execution transcript
-│   └── Java_Implementation_Documentation.md # OOP, Collections & Streams mapping
+│   │   ├── Main.java                            # Interactive application entry point
+│   │   ├── 📁 model/                            # Domain entities (Event, Student, Registration, etc.)
+│   │   ├── 📁 dao/                              # Database connection & EventDAO
+│   │   ├── 📁 service/                          # Business logic, Streams & Multithreading
+│   │   └── 📁 exception/                        # Custom exception classes
+│   ├── 📁 bin/                                  # Compiled bytecode
+│   ├── run_java.bat                             # Double-Click Runnable Java Runner (.bat)
+│   ├── java_execution_output.txt                # Output text file of Java execution
+│   ├── java_execution_screenshot.png            # Screenshot of Java execution
+│   ├── run.bat                                  # Alternate execution batch script
+│   ├── run.ps1                                  # Alternate PowerShell runner
+│   ├── sample_inputs_outputs.txt                # Recorded test execution transcript
+│   └── Java_Implementation_Documentation.md     # OOP, Collections & Streams mapping
 │
 ├── 📁 04_Foundations_of_Data_Science_25ITC31/
-│   ├── 📁 data/                             # Raw & Preprocessed CSV datasets
-│   │   ├── events.csv
-│   │   ├── students.csv
-│   │   ├── registrations.csv
-│   │   ├── feedback.csv
-│   │   └── cleaned_master_analytics.csv
-│   ├── 📁 visualizations/                   # 8 Generated high-res charts (PNG)
-│   │   ├── 01_category_wise_participation.png
-│   │   ├── 02_registration_vs_capacity_utilization.png
-│   │   ├── 03_department_wise_engagement.png
-│   │   ├── 04_feedback_rating_distribution.png
-│   │   ├── 05_monthly_event_trend.png
-│   │   ├── 06_attendance_rate_boxplot.png
-│   │   ├── 07_correlation_heatmap.png
-│   │   └── 08_pairplot_multivariate.png
-│   ├── data_retrieval.py                    # Database extraction module
-│   ├── data_preprocessing.py                # Cleaning, null imputation & Z-scores
-│   ├── eda_and_visualization.py             # Matplotlib & Seaborn visualization engine
+│   ├── 📁 data/                                 # Raw & Preprocessed CSV datasets
+│   ├── 📁 visualizations/                       # 8 Generated high-res charts (PNG)
+│   ├── run_data_science.bat                     # Double-Click Runnable Data Science Runner (.bat)
+│   ├── data_science_execution_output.txt        # Output text file of Data Science execution
+│   ├── data_science_execution_screenshot.png    # Screenshot of Data Science execution
+│   ├── data_retrieval.py                        # Database extraction module
+│   ├── data_preprocessing.py                    # Cleaning, null imputation & Z-scores
+│   ├── eda_and_visualization.py                 # Matplotlib & Seaborn visualization engine
 │   ├── College_Event_Participation_Analysis.ipynb # Complete interactive Jupyter Notebook
-│   └── Data_Science_Analysis_Report.md      # Statistical evaluation & recommendations
+│   └── Data_Science_Analysis_Report.md          # Statistical evaluation & recommendations
 │
 └── 📁 docs_and_syllabi/                     # Official course syllabi & instruction sheet
     ├── 25ITT31_DBMS_Syllabus.jpg
@@ -157,6 +155,9 @@ jupyter notebook College_Event_Participation_Analysis.ipynb
 | **3** | ER Diagram, Relational Model, SQL Scripts & Normalization | `02_Database_Management_Systems_25ITT31/` | ✅ Complete |
 | **4** | Python Code for Retrieval, Preprocessing & Visualization | `04_Foundations_of_Data_Science_25ITC31/` | ✅ Complete |
 | **5** | Master README.md & Syllabi Archives | Root `README.md` & `docs_and_syllabi/` | ✅ Complete |
+| **6** | Runnable `.bat` Files (Double-Click Execution) | `run_java.bat`, `run_dbms.bat`, `run_data_science.bat` | ✅ Complete |
+| **7** | Output Text Files for all 3 Languages | `*_execution_output.txt` in respective folders | ✅ Complete |
+| **8** | Screenshots of Program Execution | `*_execution_screenshot.png` in respective folders | ✅ Complete |
 
 ---
 *Developed for Project-Based Assessment in compliance with VCET Regulation R2025.*

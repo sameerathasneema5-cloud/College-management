@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 import numpy as np
-from data_preprocessing import preprocess_and_merge
+from data_preprocessing import preprocess_and_merge, print_summary_statistics
 
 # Set aesthetic visual style
 sns.set_theme(style="whitegrid", palette="muted")
@@ -35,6 +35,7 @@ def get_viz_dir():
 
 def generate_visualizations():
     master_df, participants_df = preprocess_and_merge()
+    print_summary_statistics(master_df)
     viz_dir = get_viz_dir()
     print("\n[VISUALIZATION] Rendering publication-quality charts...")
 

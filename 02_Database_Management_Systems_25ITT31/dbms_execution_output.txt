@@ -1,0 +1,213 @@
+================================================================================
+     VELALAR COLLEGE OF ENGINEERING AND TECHNOLOGY (VCET), ERODE-12
+            DEPARTMENT OF INFORMATION TECHNOLOGY (2026-2027)
+     DATABASE MANAGEMENT SYSTEMS (25ITT31) - SQL EXECUTION ENGINE
+================================================================================
+Database Engine: SQLite 3.49.1 (ACID Compliant)
+Database File: college_events.db
+Status: Initializing Database Schema (DDL)...
+[SUCCESS] Database Schema, Indexes and Views initialized successfully.
+
+Status: Inserting Seed Dataset (DML)...
+[SUCCESS] Tables Created: admins, analytics, attendance, categories, events, feedback, registrations, reports, students
+
+================================================================================
+                   EXECUTING 15 ANALYTICAL & REPORTING QUERIES
+================================================================================
+
+--- [Query 1: Active Upcoming Events (Selection & Projection)] ---
+SQL: SELECT      e.event_id,     e.event_name,     c.category_name,     e.event_date,     e.venue,     e.capacity F...
+event_id | event_name                         | category_name       | event_date | venue               | capacity
+---------+------------------------------------+---------------------+------------+---------------------+---------
+EVT-07   | DevOps & Kubernetes Cloud Workshop | Hands-on Workshop   | 2026-12-02 | Cloud Computing Lab | 40      
+EVT-08   | INNOVATE 2027 - Project Hackathon  | Technical Symposium | 2027-01-15 | Innovation Center   | 60      
+[Result: 2 row(s) returned]
+
+--- [Query 2: Multi-Table Inner Join - Detailed Registration Audit Log] ---
+SQL: SELECT      r.registration_id,     s.student_id,     s.name AS student_name,     s.department,     e.event_nam...
+registration_id | student_id | student_name     | department                      | event_name                                      | category_name       | registered_on       | registration_status
+----------------+------------+------------------+---------------------------------+-------------------------------------------------+---------------------+---------------------+--------------------
+REG-047         | 25ME022    | Elango B         | Mechanical Engineering          | Guest Lecture: Career Roadmap in Big Tech       | Guest Lecture       | 2026-10-30 14:00:00 | CONFIRMED          
+REG-046         | 25EE042    | Keerthana V      | Electrical and Electronics Engg | Guest Lecture: Career Roadmap in Big Tech       | Guest Lecture       | 2026-10-30 08:30:00 | CONFIRMED          
+REG-045         | 25EC015    | Chandru M        | Electronics and Comm Engg       | Guest Lecture: Career Roadmap in Big Tech       | Guest Lecture       | 2026-10-29 15:00:00 | CONFIRMED          
+REG-044         | 25CS088    | Nivetha R        | Computer Science and Engg       | Guest Lecture: Career Roadmap in Big Tech       | Guest Lecture       | 2026-10-29 11:00:00 | CONFIRMED          
+REG-043         | 25CS012    | Balamurugan T    | Computer Science and Engg       | Guest Lecture: Career Roadmap in Big Tech       | Guest Lecture       | 2026-10-28 10:00:00 | CONFIRMED          
+REG-042         | 25IT061    | Karthik Raja S   | Information Technology          | Guest Lecture: Career Roadmap in Big Tech       | Guest Lecture       | 2026-10-28 09:15:00 | CONFIRMED          
+REG-041         | 25IT001    | Aadhavan K       | Information Technology          | Guest Lecture: Career Roadmap in Big Tech       | Guest Lecture       | 2026-10-28 09:00:00 | CONFIRMED          
+REG-040         | 25AD049    | Monika S         | Artificial Intelligence & DS    | Data Analytics with Python & Pandas             | Hands-on Workshop   | 2026-10-14 12:00:00 | CONFIRMED          
+... and 39 more rows (Total: 47 rows)
+[Result: 47 row(s) returned]
+
+--- [Query 3: Left Outer Join - Capacity & Registration Gap Analysis] ---
+SQL: SELECT      e.event_id,     e.event_name,     e.capacity AS max_capacity,     COUNT(r.registration_id) AS tota...
+event_id | event_name                                      | max_capacity | total_registered | remaining_vacancies | capacity_utilization_pct
+---------+-------------------------------------------------+--------------+------------------+---------------------+-------------------------
+EVT-05   | Data Analytics with Python & Pandas             | 45           | 8                | 37                  | 17.78                   
+EVT-02   | Full Stack MERN Development Bootcamp            | 50           | 7                | 43                  | 14.0                    
+EVT-03   | National Seminar on Cyber Security & Zero Trust | 80           | 6                | 74                  | 7.5                     
+EVT-06   | Guest Lecture: Career Roadmap in Big Tech       | 100          | 7                | 93                  | 7.0                     
+EVT-01   | TECHNOFEST 2026 - AI & Cloud Symposium          | 150          | 10               | 140                 | 6.67                    
+EVT-04   | VIBRANCE 2026 - State Cultural Gala             | 250          | 9                | 241                 | 3.6                     
+EVT-07   | DevOps & Kubernetes Cloud Workshop              | 40           | 0                | 40                  | 0.0                     
+EVT-08   | INNOVATE 2027 - Project Hackathon               | 60           | 0                | 60                  | 0.0                     
+[Result: 8 row(s) returned]
+
+--- [Query 4: Aggregation with GROUP BY & HAVING - Turnout >= 85%] ---
+SQL: SELECT      e.event_id,     e.event_name,     COUNT(DISTINCT r.registration_id) AS total_registrations,     CO...
+event_id | event_name                                      | total_registrations | total_attended | attendance_pct
+---------+-------------------------------------------------+---------------------+----------------+---------------
+EVT-01   | TECHNOFEST 2026 - AI & Cloud Symposium          | 9                   | 9              | 100.0         
+EVT-02   | Full Stack MERN Development Bootcamp            | 6                   | 6              | 100.0         
+EVT-03   | National Seminar on Cyber Security & Zero Trust | 5                   | 5              | 100.0         
+EVT-04   | VIBRANCE 2026 - State Cultural Gala             | 8                   | 8              | 100.0         
+EVT-05   | Data Analytics with Python & Pandas             | 7                   | 7              | 100.0         
+EVT-06   | Guest Lecture: Career Roadmap in Big Tech       | 5                   | 5              | 100.0         
+[Result: 6 row(s) returned]
+
+--- [Query 5: Nested Subquery with IN - Students in Technical Symposiums] ---
+SQL: SELECT student_id, name, department, email FROM students WHERE student_id IN (     SELECT DISTINCT r.student_i...
+student_id | name             | department                   | email                      
+-----------+------------------+------------------------------+----------------------------
+25AD005    | Abirami T        | Artificial Intelligence & DS | abirami.25ad005@vcet.ac.in 
+25AD028    | Hemanth G        | Artificial Intelligence & DS | hemanth.25ad028@vcet.ac.in 
+25CS012    | Balamurugan T    | Computer Science and Engg    | bala.25cs012@vcet.ac.in    
+25CS045    | Gokulnath P      | Computer Science and Engg    | gokul.25cs045@vcet.ac.in   
+25EC015    | Chandru M        | Electronics and Comm Engg    | chandru.25ec015@vcet.ac.in 
+25IT001    | Aadhavan K       | Information Technology       | aadhavan.25it001@vcet.ac.in
+25IT031    | Divya Bharathi M | Information Technology       | divya.25it031@vcet.ac.in   
+25IT061    | Karthik Raja S   | Information Technology       | karthik.25it061@vcet.ac.in 
+... and 2 more rows (Total: 10 rows)
+[Result: 10 row(s) returned]
+
+--- [Query 6: Correlated Subquery with EXISTS - Events with Student Feedback] ---
+SQL: SELECT e.event_id, e.event_name, e.event_date FROM events e WHERE EXISTS (     SELECT 1      FROM feedback f  ...
+event_id | event_name                                      | event_date
+---------+-------------------------------------------------+-----------
+EVT-01   | TECHNOFEST 2026 - AI & Cloud Symposium          | 2026-08-20
+EVT-02   | Full Stack MERN Development Bootcamp            | 2026-09-05
+EVT-03   | National Seminar on Cyber Security & Zero Trust | 2026-09-18
+EVT-04   | VIBRANCE 2026 - State Cultural Gala             | 2026-10-10
+EVT-05   | Data Analytics with Python & Pandas             | 2026-10-25
+EVT-06   | Guest Lecture: Career Roadmap in Big Tech       | 2026-11-05
+[Result: 6 row(s) returned]
+
+--- [Query 7: Subquery with NOT EXISTS - Absentee List] ---
+SQL: SELECT      r.registration_id,     s.student_id,     s.name AS student_name,     s.department,     e.event_nam...
+registration_id | student_id | student_name  | department                      | event_name                                     
+----------------+------------+---------------+---------------------------------+------------------------------------------------
+REG-010         | 25AD028    | Hemanth G     | Artificial Intelligence & DS    | TECHNOFEST 2026 - AI & Cloud Symposium         
+REG-017         | 25IT002    | Ananya R      | Information Technology          | Full Stack MERN Development Bootcamp           
+REG-022         | 25EE018    | Deepak Raj S  | Electrical and Electronics Engg | National Seminar on Cyber Security & Zero Trust
+REG-032         | 25ME055    | Manoj Kumar C | Mechanical Engineering          | VIBRANCE 2026 - State Cultural Gala            
+REG-040         | 25AD049    | Monika S      | Artificial Intelligence & DS    | Data Analytics with Python & Pandas            
+REG-046         | 25EE042    | Keerthana V   | Electrical and Electronics Engg | Guest Lecture: Career Roadmap in Big Tech      
+REG-047         | 25ME022    | Elango B      | Mechanical Engineering          | Guest Lecture: Career Roadmap in Big Tech      
+[Result: 7 row(s) returned]
+
+--- [Query 8: Department-wise Participation Distribution] ---
+SQL: SELECT      s.department,     COUNT(DISTINCT s.student_id) AS registered_students_count,     COUNT(r.registrat...
+department                      | registered_students_count | total_event_signups | avg_events_per_student
+--------------------------------+---------------------------+---------------------+-----------------------
+Information Technology          | 7                         | 22                  | 3.14                  
+Computer Science and Engg       | 3                         | 9                   | 3.0                   
+Artificial Intelligence & DS    | 3                         | 7                   | 2.33                  
+Electronics and Comm Engg       | 3                         | 4                   | 1.33                  
+Mechanical Engineering          | 2                         | 3                   | 1.5                   
+Electrical and Electronics Engg | 2                         | 2                   | 1.0                   
+[Result: 6 row(s) returned]
+
+--- [Query 9: Window Function (DENSE_RANK) - Ranking Events by Volume] ---
+SQL: SELECT      e.event_id,     e.event_name,     c.category_name,     COUNT(r.registration_id) AS total_registere...
+event_id | event_name                                      | category_name       | total_registered | popularity_rank
+---------+-------------------------------------------------+---------------------+------------------+----------------
+EVT-01   | TECHNOFEST 2026 - AI & Cloud Symposium          | Technical Symposium | 10               | 1              
+EVT-04   | VIBRANCE 2026 - State Cultural Gala             | Cultural Fest       | 9                | 2              
+EVT-05   | Data Analytics with Python & Pandas             | Hands-on Workshop   | 8                | 3              
+EVT-02   | Full Stack MERN Development Bootcamp            | Hands-on Workshop   | 7                | 4              
+EVT-06   | Guest Lecture: Career Roadmap in Big Tech       | Guest Lecture       | 7                | 4              
+EVT-03   | National Seminar on Cyber Security & Zero Trust | National Seminar    | 6                | 5              
+EVT-07   | DevOps & Kubernetes Cloud Workshop              | Hands-on Workshop   | 0                | 6              
+EVT-08   | INNOVATE 2027 - Project Hackathon               | Technical Symposium | 0                | 6              
+[Result: 8 row(s) returned]
+
+--- [Query 10: Window Function (ROW_NUMBER) - Chronological Queue Order] ---
+SQL: SELECT      ROW_NUMBER() OVER (PARTITION BY r.event_id ORDER BY r.registered_on ASC) AS queue_position,     r....
+queue_position | event_id | student_id | student_name     | registered_on      
+---------------+----------+------------+------------------+--------------------
+1              | EVT-01   | 25IT001    | Aadhavan K       | 2026-08-01 10:15:00
+2              | EVT-01   | 25IT031    | Divya Bharathi M | 2026-08-01 10:20:00
+3              | EVT-01   | 25IT061    | Karthik Raja S   | 2026-08-01 10:25:00
+4              | EVT-01   | 25IT091    | Praveen Kumar V  | 2026-08-01 10:30:00
+5              | EVT-01   | 25ITL01    | Sandhya Devi R   | 2026-08-01 10:45:00
+6              | EVT-01   | 25CS012    | Balamurugan T    | 2026-08-02 09:10:00
+7              | EVT-01   | 25CS045    | Gokulnath P      | 2026-08-02 09:15:00
+8              | EVT-01   | 25EC015    | Chandru M        | 2026-08-02 11:00:00
+... and 39 more rows (Total: 47 rows)
+[Result: 47 row(s) returned]
+
+--- [Query 11: Top-Rated Events by Average Student Satisfaction] ---
+SQL: SELECT      e.event_id,     e.event_name,     COUNT(f.feedback_id) AS total_reviews,     ROUND(AVG(f.rating), ...
+event_id | event_name                                      | total_reviews | avg_rating | min_rating | max_rating
+---------+-------------------------------------------------+---------------+------------+------------+-----------
+EVT-05   | Data Analytics with Python & Pandas             | 2             | 5.0        | 5          | 5         
+EVT-04   | VIBRANCE 2026 - State Cultural Gala             | 2             | 5.0        | 5          | 5         
+EVT-01   | TECHNOFEST 2026 - AI & Cloud Symposium          | 4             | 4.75       | 4          | 5         
+EVT-02   | Full Stack MERN Development Bootcamp            | 3             | 4.67       | 4          | 5         
+EVT-03   | National Seminar on Cyber Security & Zero Trust | 2             | 4.0        | 4          | 4         
+[Result: 5 row(s) returned]
+
+--- [Query 12: Cross-Departmental Diversity (Events with >= 3 Unique Depts)] ---
+SQL: SELECT      e.event_id,     e.event_name,     COUNT(DISTINCT s.department) AS unique_departments_participating...
+event_id | event_name                                      | unique_departments_participating
+---------+-------------------------------------------------+---------------------------------
+EVT-03   | National Seminar on Cyber Security & Zero Trust | 5                               
+EVT-06   | Guest Lecture: Career Roadmap in Big Tech       | 5                               
+EVT-01   | TECHNOFEST 2026 - AI & Cloud Symposium          | 4                               
+EVT-04   | VIBRANCE 2026 - State Cultural Gala             | 4                               
+EVT-02   | Full Stack MERN Development Bootcamp            | 3                               
+EVT-05   | Data Analytics with Python & Pandas             | 3                               
+[Result: 6 row(s) returned]
+
+--- [Query 13: Active Star Participants (Students with >= 3 Events)] ---
+SQL: SELECT      s.student_id,     s.name,     s.department,     s.year,     COUNT(a.attendance_id) AS events_atten...
+student_id | name             | department                   | year | events_attended_count
+-----------+------------------+------------------------------+------+----------------------
+25IT001    | Aadhavan K       | Information Technology       | 3    | 5                    
+25IT061    | Karthik Raja S   | Information Technology       | 3    | 5                    
+25CS012    | Balamurugan T    | Computer Science and Engg    | 3    | 4                    
+25IT031    | Divya Bharathi M | Information Technology       | 3    | 4                    
+25IT091    | Praveen Kumar V  | Information Technology       | 3    | 4                    
+25AD005    | Abirami T        | Artificial Intelligence & DS | 2    | 3                    
+25CS045    | Gokulnath P      | Computer Science and Engg    | 2    | 3                    
+25ITL01    | Sandhya Devi R   | Information Technology       | 3    | 3                    
+[Result: 8 row(s) returned]
+
+--- [Query 14: Comprehensive Executive Summary View (v_event_summary)] ---
+SQL: SELECT * FROM v_event_summary...
+event_id | event_name                                      | category_name       | event_date | venue               | capacity | total_registrations | available_seats | capacity_utilization_pct | total_attended | attendance_rate_pct | average_feedback_rating
+---------+-------------------------------------------------+---------------------+------------+---------------------+----------+---------------------+-----------------+--------------------------+----------------+---------------------+------------------------
+EVT-01   | TECHNOFEST 2026 - AI & Cloud Symposium          | Technical Symposium | 2026-08-20 | Main Auditorium     | 150      | 10                  | 140             | 6.67                     | 9              | 90.0                | 4.75                   
+EVT-02   | Full Stack MERN Development Bootcamp            | Hands-on Workshop   | 2026-09-05 | IT Lab 3 & 4        | 50       | 7                   | 43              | 14.0                     | 6              | 85.71               | 4.67                   
+EVT-03   | National Seminar on Cyber Security & Zero Trust | National Seminar    | 2026-09-18 | Conference Hall 1   | 80       | 6                   | 74              | 7.5                      | 5              | 83.33               | 4.0                    
+EVT-04   | VIBRANCE 2026 - State Cultural Gala             | Cultural Fest       | 2026-10-10 | Open Air Theatre    | 250      | 9                   | 241             | 3.6                      | 8              | 88.89               | 5.0                    
+EVT-05   | Data Analytics with Python & Pandas             | Hands-on Workshop   | 2026-10-25 | MCA Lab 1           | 45       | 8                   | 37              | 17.78                    | 7              | 87.5                | 5.0                    
+EVT-06   | Guest Lecture: Career Roadmap in Big Tech       | Guest Lecture       | 2026-11-05 | Seminar Hall 2      | 100      | 7                   | 93              | 7.0                      | 5              | 71.43               | 4.0                    
+EVT-07   | DevOps & Kubernetes Cloud Workshop              | Hands-on Workshop   | 2026-12-02 | Cloud Computing Lab | 40       | 0                   | 40              | 0.0                      | 0              | 0.0                 | None                   
+EVT-08   | INNOVATE 2027 - Project Hackathon               | Technical Symposium | 2027-01-15 | Innovation Center   | 60       | 0                   | 60              | 0.0                      | 0              | 0.0                 | None                   
+[Result: 8 row(s) returned]
+
+--- [Query 15: Department Engagement Comparative View (v_department_engagement)] ---
+SQL: SELECT * FROM v_department_engagement...
+department                      | total_active_students | total_event_registrations | total_events_attended | dept_attendance_pct
+--------------------------------+-----------------------+---------------------------+-----------------------+--------------------
+Artificial Intelligence & DS    | 3                     | 7                         | 5                     | 71.43              
+Computer Science and Engg       | 3                     | 9                         | 9                     | 100.0              
+Electrical and Electronics Engg | 2                     | 2                         | 0                     | 0.0                
+Electronics and Comm Engg       | 3                     | 4                         | 4                     | 100.0              
+Information Technology          | 7                     | 22                        | 21                    | 95.45              
+Mechanical Engineering          | 2                     | 3                         | 1                     | 33.33              
+[Result: 6 row(s) returned]
+
+================================================================================
+      ALL 15 SQL QUERIES EXECUTED SUCCESSFULLY - DATABASE ENGINE READY
+================================================================================

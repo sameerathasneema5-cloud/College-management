@@ -4,7 +4,7 @@
 ================================================================================
 
 [TEST FR-01] Creating new event 'EVT-TEST' with capacity = 2...
---> Result: EVT-TEST   | AI Micro-Workshop                | Hands-on Workshop  | 2026-11-27 | Seminar Hall 1     | Cap:   2 | Reg:   0 | ACTIVE
+--> Result: EVT-TEST   | AI Micro-Workshop                | Hands-on Workshop  | 2026-11-28 | Seminar Hall 1     | Cap:   2 | Reg:   0 | ACTIVE
 
 [TEST FR-02] Registering Student '25IT001' for 'EVT-TEST' (Seat 1/2)...
 --> PASS: Registered successfully with ID REG-026

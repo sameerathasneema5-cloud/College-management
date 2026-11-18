@@ -13,7 +13,7 @@ import com.college.eventmgmt.service.AnalyticsService;
 import com.college.eventmgmt.service.EventService;
 import com.college.eventmgmt.service.ReportGeneratorThread;
 
-import java.io.File;
+import java.io.*;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
@@ -35,6 +35,9 @@ public class Main {
     private static final AnalyticsService analyticsService = new AnalyticsService(eventDAO);
 
     public static void main(String[] args) {
+        // Setup dual output logger to write to both Console and java_execution_output.txt
+        setupDualLogging();
+
         // Check for automated demo flag
         if (args.length > 0 && "--demo".equalsIgnoreCase(args[0])) {
             runAutomatedDemonstration();
@@ -86,12 +89,49 @@ public class Main {
         scanner.close();
     }
 
+    private static void setupDualLogging() {
+        try {
+            File outputFile = new File("java_execution_output.txt");
+            FileOutputStream fos = new FileOutputStream(outputFile);
+            PrintStream consoleOut = System.out;
+
+            OutputStream dualOut = new OutputStream() {
+                @Override
+                public void write(int b) throws IOException {
+                    consoleOut.write(b);
+                    fos.write(b);
+                }
+
+                @Override
+                public void write(byte[] b, int off, int len) throws IOException {
+                    consoleOut.write(b, off, len);
+                    fos.write(b, off, len);
+                }
+
+                @Override
+                public void flush() throws IOException {
+                    consoleOut.flush();
+                    fos.flush();
+                }
+
+                @Override
+                public void close() throws IOException {
+                    fos.close();
+                }
+            };
+
+            System.setOut(new PrintStream(dualOut, true, "UTF-8"));
+        } catch (Exception e) {
+            // If file logging cannot be initialized, fallback to standard console
+        }
+    }
+
     private static void printMainMenu() {
         System.out.println("\n--------------------------------------------------------------------------------");
         System.out.println("                                MAIN PORTAL");
         System.out.println("--------------------------------------------------------------------------------");
-        System.out.println(" [1] Administrator / Event Organizer Portal");
-        System.out.println(" [2] Student Portal (Browse, Register, Feedback)");
+        System.out.println(" [1] Administrator / Event Organizer Portal (Manage Events, Attendance)");
+        System.out.println(" [2] Student Portal (Browse, Register, View Status, Feedback)");
         System.out.println(" [3] Faculty & Participation Analytics Dashboard (Java Streams & Reports)");
         System.out.println(" [4] Run Automated Demonstration & Validation Suite (All FRs Verified)");
         System.out.println(" [5] Export Data & Exit System");

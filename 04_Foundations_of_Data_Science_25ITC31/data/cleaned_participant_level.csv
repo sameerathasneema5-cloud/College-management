@@ -16,7 +16,7 @@ REG-033,25IT001,EVT-05,CONFIRMED,ATTENDED,1,Aadhavan K,aadhavan.25it001@vcet.ac.
 REG-010,25AD028,EVT-01,CONFIRMED,ABSENT,0,Hemanth G,hemanth.25ad028@vcet.ac.in,Artificial Intelligence & DS,2,TECHNOFEST 2026 - AI Symposium,Technical Symposium,2026-08-20,
 REG-009,25AD005,EVT-01,CONFIRMED,ATTENDED,1,Abirami T,abirami.25ad005@vcet.ac.in,Artificial Intelligence & DS,2,TECHNOFEST 2026 - AI Symposium,Technical Symposium,2026-08-20,
 REG-004,25IT091,EVT-01,CONFIRMED,ATTENDED,1,Praveen Kumar V,praveen.25it091@vcet.ac.in,Information Technology,3,TECHNOFEST 2026 - AI Symposium,Technical Symposium,2026-08-20,5.0
-REG-026,25IT001,EVT-TEST,CONFIRMED,REGISTERED,0,Aadhavan K,aadhavan.25it001@vcet.ac.in,Information Technology,3,AI Micro-Workshop,Hands-on Workshop,2026-11-27,
+REG-026,25IT001,EVT-TEST,CONFIRMED,REGISTERED,0,Aadhavan K,aadhavan.25it001@vcet.ac.in,Information Technology,3,AI Micro-Workshop,Hands-on Workshop,2026-11-28,
 REG-003,25IT061,EVT-01,CONFIRMED,ATTENDED,1,Karthik Raja S,karthik.25it061@vcet.ac.in,Information Technology,3,TECHNOFEST 2026 - AI Symposium,Technical Symposium,2026-08-20,4.0
 REG-002,25IT031,EVT-01,CONFIRMED,ATTENDED,1,Divya Bharathi M,divya.25it031@vcet.ac.in,Information Technology,3,TECHNOFEST 2026 - AI Symposium,Technical Symposium,2026-08-20,5.0
 REG-001,25IT001,EVT-01,CONFIRMED,ATTENDED,1,Aadhavan K,aadhavan.25it001@vcet.ac.in,Information Technology,3,TECHNOFEST 2026 - AI Symposium,Technical Symposium,2026-08-20,5.0
@@ -24,5 +24,5 @@ REG-008,25EC015,EVT-01,CONFIRMED,ATTENDED,1,Chandru M,chandru.25ec015@vcet.ac.in
 REG-007,25CS045,EVT-01,CONFIRMED,ATTENDED,1,Gokulnath P,gokul.25cs045@vcet.ac.in,Computer Science and Engg,2,TECHNOFEST 2026 - AI Symposium,Technical Symposium,2026-08-20,
 REG-006,25CS012,EVT-01,CONFIRMED,ATTENDED,1,Balamurugan T,bala.25cs012@vcet.ac.in,Computer Science and Engg,3,TECHNOFEST 2026 - AI Symposium,Technical Symposium,2026-08-20,
 REG-005,25ITL01,EVT-01,CONFIRMED,ATTENDED,1,Sandhya Devi R,sandhya.25itl01@vcet.ac.in,Information Technology,3,TECHNOFEST 2026 - AI Symposium,Technical Symposium,2026-08-20,
-REG-027,25IT031,EVT-TEST,CONFIRMED,REGISTERED,0,Divya Bharathi M,divya.25it031@vcet.ac.in,Information Technology,3,AI Micro-Workshop,Hands-on Workshop,2026-11-27,
+REG-027,25IT031,EVT-TEST,CONFIRMED,REGISTERED,0,Divya Bharathi M,divya.25it031@vcet.ac.in,Information Technology,3,AI Micro-Workshop,Hands-on Workshop,2026-11-28,
 REG-040,25EE018,EVT-05,CONFIRMED,ABSENT,0,Deepak Raj S,deepak.25ee018@vcet.ac.in,Electrical and Electronics Engg,2,Data Analytics with Python Masterclass,Hands-on Workshop,2026-10-25,

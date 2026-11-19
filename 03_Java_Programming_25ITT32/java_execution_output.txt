@@ -1,19 +1,150 @@
+[DB-INFO] MySQL Driver not found in classpath. Falling back to Embedded Datastore.
+================================================================================
+     VELALAR COLLEGE OF ENGINEERING AND TECHNOLOGY (VCET), ERODE-12
+            DEPARTMENT OF INFORMATION TECHNOLOGY (2026-2027)
+     COLLEGE EVENT MANAGEMENT AND PARTICIPATION ANALYSIS SYSTEM (25ITT32)
+================================================================================
 
+--------------------------------------------------------------------------------
+                                MAIN PORTAL
+--------------------------------------------------------------------------------
+ [1] Administrator / Event Organizer Portal (Manage Events, Attendance)
+ [2] Student Portal (Browse, Register, View Status, Feedback)
+ [3] Faculty & Participation Analytics Dashboard (Java Streams & Reports)
+ [4] Run Automated Demonstration & Validation Suite (All FRs Verified)
+ [5] Export Data & Exit System
+--------------------------------------------------------------------------------
+Enter your choice (1-5): 
+Enter Student Register No (e.g., 25IT001, 25IT031, 25IT061, 25IT091, 25ITL01): 
+Welcome, Praveen Kumar V (25IT091 - Information Technology)!
+
+--- [STUDENT PORTAL] ---
+1. Browse Active Events with Vacancies
+2. Register for an Event
+3. View My Registrations & Attendance
+4. Submit Post-Event Rating and Feedback
+5. Back to Main Menu
+Select option (1-5): Enter Event ID to register (e.g., EVT-07): 
+[SUCCESS] Registration Confirmed!
+Details: REG-026    | Student: 25IT091    | Event: EVT-07     | Date: 2026-11-19 22:47 | Status: CONFIRMED
+
+--- [STUDENT PORTAL] ---
+1. Browse Active Events with Vacancies
+2. Register for an Event
+3. View My Registrations & Attendance
+4. Submit Post-Event Rating and Feedback
+5. Back to Main Menu
+Select option (1-5): 
+=== ACTIVE EVENTS OPEN FOR REGISTRATION ===
+[EVT-07] DevOps & Kubernetes Cloud Workshop  | Date: 2026-12-02 | Seats Left: 39/40
+[EVT-08] INNOVATE 2027 - Project Hackathon   | Date: 2027-01-15 | Seats Left: 60/60
+
+--- [STUDENT PORTAL] ---
+1. Browse Active Events with Vacancies
+2. Register for an Event
+3. View My Registrations & Attendance
+4. Submit Post-Event Rating and Feedback
+5. Back to Main Menu
+Select option (1-5): 
+=== MY REGISTRATION & ATTENDANCE HISTORY ===
+REG-004    | Student: 25IT091    | Event: EVT-01     | Date: 2026-11-19 22:46 | Status: CONFIRMED | Attendance: ATTENDED
+REG-036    | Student: 25IT091    | Event: EVT-05     | Date: 2026-11-19 22:46 | Status: CONFIRMED | Attendance: ATTENDED
+REG-026    | Student: 25IT091    | Event: EVT-07     | Date: 2026-11-19 22:47 | Status: CONFIRMED | Attendance: REGISTERED
+
+--- [STUDENT PORTAL] ---
+1. Browse Active Events with Vacancies
+2. Register for an Event
+3. View My Registrations & Attendance
+4. Submit Post-Event Rating and Feedback
+5. Back to Main Menu
+Select option (1-5): Enter Event ID to rate (e.g., EVT-01): Enter Rating (1 to 5 Stars): Enter Feedback Comments: 
+[SUCCESS] Thank you! Feedback recorded successfully.
+
+--- [STUDENT PORTAL] ---
+1. Browse Active Events with Vacancies
+2. Register for an Event
+3. View My Registrations & Attendance
+4. Submit Post-Event Rating and Feedback
+5. Back to Main Menu
+Select option (1-5): 
+--------------------------------------------------------------------------------
+                                MAIN PORTAL
+--------------------------------------------------------------------------------
+ [1] Administrator / Event Organizer Portal (Manage Events, Attendance)
+ [2] Student Portal (Browse, Register, View Status, Feedback)
+ [3] Faculty & Participation Analytics Dashboard (Java Streams & Reports)
+ [4] Run Automated Demonstration & Validation Suite (All FRs Verified)
+ [5] Export Data & Exit System
+--------------------------------------------------------------------------------
+Enter your choice (1-5): 
+================================================================================
+                 FACULTY & EVENT PARTICIPATION ANALYTICS
+             Powered by Java 21 Streams API & Concurrency
+================================================================================
+
+[1] Department-wise Participation Distribution (Java Streams):
+    Artificial Intelligence & DS     :  5 students registered
+    Electronics and Comm Engg        :  2 students registered
+    Computer Science and Engg        :  5 students registered
+    Electrical and Electronics Engg  :  1 students registered
+    Information Technology           : 13 students registered
+
+[2] Category-wise Event Distribution:
+    Technical Symposium       :  2 events
+    Guest Lecture             :  1 events
+    Hands-on Workshop         :  3 events
+    National Seminar          :  1 events
+    Cultural Fest             :  1 events
+
+[3] Overall Institutional Satisfaction Rating: 4.75 / 5.0 Stars
+
+[4] Event Participation Performance Analysis:
+Analysis ID | Event ID                         | Total Reg | Attended | Attend Rate  | Avg Rating
+-----------------------------------------------------------------------------------------
+ANA-07      | DevOps & Kubernetes Cloud Workshop | 1         | 0        |   0.00%     | 4.00★
+ANA-06      | Career in Big Tech - Guest Lecture | 0         | 0        |   0.00%     | 0.00★
+ANA-08      | INNOVATE 2027 - Project Hackathon | 0         | 0        |   0.00%     | 0.00★
+ANA-01      | TECHNOFEST 2026 - AI Symposium   | 10        | 9        |  90.00%     | 4.67★
+ANA-03      | Cyber Security & Zero Trust Seminar | 0         | 0        |   0.00%     | 0.00★
+ANA-02      | Full Stack MERN Bootcamp         | 7         | 6        |  85.71%     | 5.00★
+ANA-05      | Data Analytics with Python Masterclass | 8         | 7        |  87.50%     | 5.00★
+ANA-04      | VIBRANCE 2026 - State Cultural Gala | 0         | 0        |   0.00%     | 0.00★
+
+[5] Launching Asynchronous Multithreaded Audit Worker...
+[THREAD] Starting background asynchronous report generation on: Report-Worker-Thread
+[THREAD-PROGRESS] Compiled analysis for EVT-01 -> Attendance Rate: 90.00%
+[THREAD-PROGRESS] Compiled analysis for EVT-02 -> Attendance Rate: 85.71%
+[THREAD-PROGRESS] Compiled analysis for EVT-03 -> Attendance Rate: 0.00%
+[THREAD-PROGRESS] Compiled analysis for EVT-04 -> Attendance Rate: 0.00%
+[THREAD-PROGRESS] Compiled analysis for EVT-05 -> Attendance Rate: 87.50%
+[THREAD-PROGRESS] Compiled analysis for EVT-06 -> Attendance Rate: 0.00%
+[THREAD] Background report compilation completed successfully.
+
+--------------------------------------------------------------------------------
+                                MAIN PORTAL
+--------------------------------------------------------------------------------
+ [1] Administrator / Event Organizer Portal (Manage Events, Attendance)
+ [2] Student Portal (Browse, Register, View Status, Feedback)
+ [3] Faculty & Participation Analytics Dashboard (Java Streams & Reports)
+ [4] Run Automated Demonstration & Validation Suite (All FRs Verified)
+ [5] Export Data & Exit System
+--------------------------------------------------------------------------------
+Enter your choice (1-5): 
 ================================================================================
            RUNNING AUTOMATED TEST SUITE & SCENARIO 1 VALIDATION
 ================================================================================
 
 [TEST FR-01] Creating new event 'EVT-TEST' with capacity = 2...
---> Result: EVT-TEST   | AI Micro-Workshop                | Hands-on Workshop  | 2026-11-28 | Seminar Hall 1     | Cap:   2 | Reg:   0 | ACTIVE
+--> Result: EVT-TEST   | AI Micro-Workshop                | Hands-on Workshop  | 2026-11-29 | Seminar Hall 1     | Cap:   2 | Reg:   0 | ACTIVE
 
 [TEST FR-02] Registering Student '25IT001' for 'EVT-TEST' (Seat 1/2)...
---> PASS: Registered successfully with ID REG-026
+--> PASS: Registered successfully with ID REG-027
 
 [TEST FR-03A] Attempting Duplicate Registration for '25IT001' in 'EVT-TEST'...
 --> PASS [Expected Exception Caught]: Registration Rejected: Student [25IT001] is already registered for Event [EVT-TEST].
 
 [TEST FR-03B] Registering Student '25IT031' for 'EVT-TEST' (Seat 2/2 - Cap Reached)...
---> PASS: Registered successfully with ID REG-027
+--> PASS: Registered successfully with ID REG-028
 
 [TEST FR-03C] Attempting Overflow Registration for '25IT061' in 'EVT-TEST' (Capacity 2)...
 --> PASS [Expected Exception Caught]: Registration Rejected: Event [EVT-TEST] has reached maximum capacity (2 seats). No vacancies remain.
@@ -44,3 +175,17 @@ Visual Chart: visualizations/event_analysis_evt-01.png
 ================================================================================
           ALL FUNCTIONAL REQUIREMENTS TESTED & VERIFIED (100% PASS)
 ================================================================================
+
+--------------------------------------------------------------------------------
+                                MAIN PORTAL
+--------------------------------------------------------------------------------
+ [1] Administrator / Event Organizer Portal (Manage Events, Attendance)
+ [2] Student Portal (Browse, Register, View Status, Feedback)
+ [3] Faculty & Participation Analytics Dashboard (Java Streams & Reports)
+ [4] Run Automated Demonstration & Validation Suite (All FRs Verified)
+ [5] Export Data & Exit System
+--------------------------------------------------------------------------------
+Enter your choice (1-5): 
+[SYSTEM] Exporting latest operational data for Python analytics pipeline...
+[EXPORT] Operational datasets exported to: ../04_Foundations_of_Data_Science_25ITC31/data
+[SYSTEM] Exiting College Event Management System. Thank you!

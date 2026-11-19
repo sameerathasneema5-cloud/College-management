@@ -3,9 +3,9 @@
 
 **Institution:** Velalar College of Engineering and Technology (Autonomous), Erode – 638012  
 **Department:** Department of Information Technology  
-**Class:** 25IT3A & 25IT3B | **Regulations:** R2025  
+**Regulations:** R2025  
 **Assigned Scenario:** **Scenario 1 – College Event Management and Participation Analysis System**  
-Student: Sameera Thasneema A | Register No.: 91
+**Student:** Sameera Thasneema A | **Register No.:** 91
 
 ---
 
